@@ -22,11 +22,12 @@ class UserController extends Controller
     public function saveUser(User $user, Request $userRequest)
     {
         $data = $userRequest->all();
-@@ -28,7 +34,14 @@ public function deleteUser(User $user)
+    public function deleteUser(User $user)
+
         $user->delete();
         return back()->with(['success' => 'Data berhasil dihapus']);
     }
-    public function updateUser()
+
     public function updateUser(User $user, Request $userRequest)
     {
         $data = $userRequest->all();
